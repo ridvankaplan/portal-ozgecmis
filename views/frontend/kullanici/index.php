@@ -7,7 +7,8 @@ use yii\grid\GridView;
 /* @var $searchModel frontend\models\KullaniciSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Özgeçmiş Oluşturma  ';
+/* @var $model frontend\models\Kullanici */
+$this->title = 'Özgeçmiş';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="kullanici-index">
@@ -19,27 +20,31 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Özgeçmiş Oluşturma', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?= GridView::widget([
+
+<?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'isim',
             'soyisim',
-            'ozet',
-            'tel',
-            'email:email',
-            'website',
-            'lokasyon',
-            'lise',
-            'universite',
-            'yetenek',
-            'dil',
-            'sertifika',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+    'class' => 'yii\grid\ActionColumn',
+    'template' => '{view} ',
+    'buttons'  => [
+        'view' => function($url, $model) {
+            return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                        'title' => Yii::t('app', 'Özgeçmişi İncele'),]);
+        }
+    ],
+    'urlCreator' => function ($action, $model, $key, $index) {
+        if ($action === 'view') {
+            $url = '/kullanici/view?id='.$model['id'];
+            return $url;
+        }
+    }
+]
         ],
     ]); ?>
+
+
 </div>
