@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers;
+namespace kouosl\ozgecmis\controllers\frontend;
 
 use Yii;
 use frontend\models\Kullanici;

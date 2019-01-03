@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Kullanici */
 
-$this->title = 'Create Kullanici';
+$this->title = 'Özgeçmiş Oluşturma';
 $this->params['breadcrumbs'][] = ['label' => 'Kullanicis', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

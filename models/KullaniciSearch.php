@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace kouosl\portal-ozgecmis\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -18,7 +18,7 @@ class KullaniciSearch extends Kullanici
     {
         return [
             [['id', 'tel'], 'integer'],
-            [['isim', 'soyisim', 'ozet', 'email', 'website', 'lokasyon', 'lise', 'universite', 'yetenek', 'dil', 'sertifika'], 'safe'],
+            [['isim', 'soyisim', 'ozet', 'email', 'website', 'lokasyon', 'lise', 'universite', 'yetenek', 'dil', 'sertifika', 'bolum'], 'safe'],
         ];
     }
 
@@ -72,7 +72,8 @@ class KullaniciSearch extends Kullanici
             ->andFilterWhere(['like', 'universite', $this->universite])
             ->andFilterWhere(['like', 'yetenek', $this->yetenek])
             ->andFilterWhere(['like', 'dil', $this->dil])
-            ->andFilterWhere(['like', 'sertifika', $this->sertifika]);
+            ->andFilterWhere(['like', 'sertifika', $this->sertifika])
+            ->andFilterWhere(['like', 'bolum', $this->bolum]);
 
         return $dataProvider;
     }

@@ -1,5 +1,5 @@
 <?php
-namespace kouosl\ozgecmis\controllers\backend;
+namespace kouosl\portal-ozgecmis\controllers\backend;
 
 
 /**

@@ -1,8 +1,9 @@
 <?php
 use kouosl\theme\helpers\Html;
 use kouosl\theme\widgets\Portlet;
+use yii\grid\GridView;	
 
-$this->title = 'Index Sample';
+$this->title = 'Özgeçmiş Modülü';
 $data['title'] = Html::encode($this->title);
 $this->params['breadcrumbs'][] = $this->title;
 

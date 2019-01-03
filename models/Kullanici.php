@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace kouosl\portal-ozgecmis\models;
 
 use Yii;
 
@@ -20,6 +20,7 @@ use Yii;
  * @property string $yetenek
  * @property string $dil
  * @property string $sertifika
+ * @property string $bolum
  */
 class Kullanici extends \yii\db\ActiveRecord
 {
@@ -39,7 +40,7 @@ class Kullanici extends \yii\db\ActiveRecord
         return [
             [['isim', 'soyisim', 'ozet', 'tel', 'email', 'website', 'lokasyon', 'lise', 'universite', 'yetenek', 'dil', 'sertifika'], 'required'],
             [['tel'], 'integer'],
-            [['isim', 'soyisim', 'email', 'website', 'lokasyon', 'lise', 'universite', 'yetenek', 'dil', 'sertifika'], 'string', 'max' => 128],
+            [['isim', 'soyisim', 'email', 'website', 'lokasyon', 'lise', 'universite', 'yetenek', 'dil', 'sertifika', 'bolum'], 'string', 'max' => 128],
             [['ozet'], 'string', 'max' => 10000],
         ];
     }
@@ -51,18 +52,19 @@ class Kullanici extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'isim' => 'Isim',
+            'isim' => 'İsim',
             'soyisim' => 'Soyisim',
-            'ozet' => 'Ozet',
+            'ozet' => 'Özet',
             'tel' => 'Tel',
             'email' => 'Email',
             'website' => 'Website',
             'lokasyon' => 'Lokasyon',
             'lise' => 'Lise',
-            'universite' => 'Universite',
+            'universite' => 'Üniversite',
             'yetenek' => 'Yetenek',
             'dil' => 'Dil',
             'sertifika' => 'Sertifika',
+            'bolum' => 'Bölüm',
         ];
     }
 }
