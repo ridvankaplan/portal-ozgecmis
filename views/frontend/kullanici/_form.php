@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -15,8 +15,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'isim')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'soyisim')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'ozet')->textInput(['maxlength' => true]) ?>
+    
+    <?= $form->field($model, 'ozet')->textarea(array('rows'=>6,'cols'=>5)) ?>
 
     <?= $form->field($model, 'tel')->textInput() ?>
 
