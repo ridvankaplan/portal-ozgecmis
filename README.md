@@ -37,9 +37,9 @@ php yii migrate --migrationPath=@vendor/kouosl/portal-ozgecmis/migrations --inte
 ## Notlar
 
 - Kullanıcı paneli açıldığında kayıtlı özgeçmişleri listelemek için bir yönlendirme bulunmaktadır. 
-- Özgeçmiş listelendiğinde istenilen özgeçmiş ayrıntılı olarak görüntülünebilir.
+- Özgeçmişler listelendiğinde seçilen özgeçmiş ayrıntılı olarak görüntülenebilir.
 - Kullanıcı panelinde ayrıca yeni özgeçmiş oluşturulabilir.
 - Yönetici paneli açıldığında kayıtlı özgeçmişleri listelemek için bir yönlendirme bulunmaktadır. 
-- Yönetici panelinde ise kayıtlı özgeçmişler listenilebilir, silinebilir veya oluşturabilinir.
+- Yönetici panelinde ise kayıtlı özgeçmişleri listeleme, silme veya oluşturma işlemleri yapılabilir.
 
 
