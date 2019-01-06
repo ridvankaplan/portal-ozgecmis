@@ -4,7 +4,10 @@
 
 ============
 
-Portal özgeçmiş modülünü, portal web uygulamasına eklemek için /portal dizininde bulunan composer.json dosyasına gidilerek, aşağıdaki kod parçaları repositories ve require kısımlarına eklenir. Portal dizininde composer update işlemi yapılarak modül yüklenir.
+- Admin paneli: http://portal.kouosl/admin/ozgecmis<br>
+- Kullanıcı paneli: http://portal.kouosl/ozgecmis
+
+Portal özgeçmiş modülünü, portal web uygulamasına eklemek için /portal dizininde bulunan composer.json dosyasına, aşağıdaki kod parçaları repositories ve require kısımlarına eklenir. Portal dizininde composer update işlemi yapılarak modül yüklenir.
 
 ```bash
 ....
@@ -19,7 +22,7 @@ Portal özgeçmiş modülünü, portal web uygulamasına eklemek için /portal d
 "require": {
      
     ....   
-    "kouosl/portal-ozgecmis": "dev-develop"
+    "kouosl/portal-ozgecmis": "dev-master"
 },
 ....
 ```
@@ -27,11 +30,8 @@ Portal özgeçmiş modülünü, portal web uygulamasına eklemek için /portal d
 Modülün yüklenmesinin ardından kullanıcı ve yönetici panellerinin çalışması için gerekli olan veritabanı tabloları, modülün migrations klasörü içerisinde bulunmaktadır. Migrate işlemi için altta bulunan kod parçasının portal dizininde çalıştırılması gerekmektedir.
 
 ```bash
-php yii migrate --migrationPath=@vendor/kouosl/portal-ozgecmis/migrations --interactive=0
+$php yii migrate --migrationPath=@vendor/kouosl/portal-ozgecmis/migrations --interactive=0
 ```
-
-- Admin paneli: http://portal.kouosl/admin/ozgecmis<br>
-- Kullanıcı paneli: http://portal.kouosl/ozgecmis
 
 
 ## Notlar
