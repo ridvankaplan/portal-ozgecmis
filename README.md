@@ -1,6 +1,6 @@
-##Özgeçmiş Modülü
+# Özgeçmiş Modülü
 
-#Kurulum
+## Kurulum
 
 ============
 
@@ -34,7 +34,7 @@ php yii migrate --migrationPath=@vendor/kouosl/portal-ozgecmis/migrations --inte
 - Kullanıcı paneli: http://portal.kouosl/ozgecmis
 
 
-##Notlar
+## Notlar
 
 - Kullanıcı paneli açıldığında kayıtlı özgeçmişleri listelemek için bir yönlendirme bulunmaktadır. 
 - Özgeçmiş listelendiğinde istenilen özgeçmiş ayrıntılı olarak görüntülünebilir.
